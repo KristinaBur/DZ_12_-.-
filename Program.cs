@@ -6,17 +6,19 @@
 Для строки можно использовать данный метод string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries)
 (пользователь вводит в консоли числа через пробел и они формируют строку) */
 
-Console.Write("Введите числа (через пробел): ");
-//int [] numS = Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
-string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-int count = 0;
+Console.WriteLine("Введите числа (через пробел): ");
+int [] numS = Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
 
+//string stringArray = Console.ReadLine()!;
+//string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+int count = 0;
 
 for (int i = 0; i < numS.Length; i++)
 {
-    if (numS[i] > 0)
+    if (numS[i] > 0) 
     {
         count++;
     }
+
 }
 Console.WriteLine($"[{String.Join(",", numS)}] -> Количество чисел больше нуля: {count}");
